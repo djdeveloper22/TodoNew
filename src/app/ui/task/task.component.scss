@@ -1,0 +1,19 @@
+.container-task {
+  &__lisTask {
+    width: 26rem;
+    height: 26rem;
+
+    &__input-search {
+      &__elements {
+        &__input {
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+      }
+    }
+  }
+}
+
+.estilos__ul {
+  height: 28vh;
+  overflow: auto;
+}

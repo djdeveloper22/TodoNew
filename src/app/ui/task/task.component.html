@@ -1,0 +1,22 @@
+<div class="container-task w-100 vh-100  d-flex justify-content-center align-items-center">
+  <div class="container-task__lisTask p-4  rounded border border-2 border-success-subtle">
+    <div class="container-task__lisTask__input-search">
+      <div class="container-task__lisTask__input-search__elements d-flex gap-2">
+        <input type="text" placeholder="Search Task" class="flex-grow-1 rounded container-task__lisTask__input-search__elements__input">
+        <button type="button" class="btn btn-success"> <i class="bi bi-search fs-5"></i> </button>
+      </div>
+      <div class="container-task__lisTask__btn-save mt-3">
+        <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#exampleModal"> Insert task </button>
+      </div>
+    </div>
+    <div class="container-task__insertTasjk pt-2 pb-3">
+      <h4 class="text-center text-light">Task List</h4>
+      <ul class="list-group estilos__ul">
+        <li class="list-group-item" *ngFor="let item of [1,2,3,4,3,4,5]">
+          <app-list-task></app-list-task>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<app-modal></app-modal>
