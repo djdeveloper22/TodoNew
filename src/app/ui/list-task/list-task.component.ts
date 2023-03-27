@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TodoDto } from '../../domain/entities/todo.dto';
 
 @Component({
   selector: 'app-list-task',
@@ -7,4 +8,23 @@ import { Component } from '@angular/core';
 })
 export class ListTaskComponent {
 
+  @Input() public listTask: any;
+  @Output() emitListTaskdelete = new EventEmitter<any>();
+  public hidden: boolean = true;
+
+  delete(payload: TodoDto): void{
+    this.emitListTaskdelete.emit(payload.id);
+  }
+
+  readTask(): void{
+    this.listTask;
+  }
+
+  update(): void{
+
+  }
+
+  actionHidden(): void{
+    this.hidden = !this.hidden;
+  }
 }
